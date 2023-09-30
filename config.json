@@ -12,5 +12,20 @@
             "key": "education_with_care",
             "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
         }
+    ],
+    "paragraphs": [
+        {
+            "start_string": "Załącznik nr 3",
+            "end_string": "Załącznik nr 4",
+            "key": "revenues",
+            "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
+        },
+        {
+            "start_string": "Załącznik nr 4",
+            "end_string": "Załącznik nr 5",
+            "key": "expenses",
+            "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
+        }
     ]
+
 }
