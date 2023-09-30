@@ -43,3 +43,23 @@ def get_szkola(sio, szkola):
 
 def get_max_uczniow(sio):
     return float(sio[-1]["Liczba uczniów"]) + float(sio[-1]["Liczba uczniów poza szkołą"])
+
+
+def get_sio_students(sio_file_path):
+    sio = get_data(sio_file_path)
+
+    headers = {}
+    sio_list = []
+
+    for ind, i in enumerate(sio['Workbook']['Worksheet']['Table']['Row']):
+        if ind < 2:
+            continue
+        sio_dict = {}
+        for idx, j in enumerate(i['Cell']):
+            if 'Data' in j:
+                if ind == 2:
+                    headers[idx] = j['Data']['#text']
+                else:
+                    sio_dict[headers[idx]] = j['Data'].get("#text", None)
+        sio_list.append(sio_dict)
+    return sio_list
