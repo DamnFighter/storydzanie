@@ -31,17 +31,16 @@ def get_wydatki(sprawozdanie, szkola, dzial=None, rozdzial=None, grupa=None, par
                 except ValueError:
                     pass
             else:
-                try:
-                    wydatki += float(pozycja["WW"])
-                except KeyError:
+                if "WW" not in pozycja:
                     pozycja["WW"] = "0"
+    wydatki = sum([float(wydatek["WW"]) for wydatek in pozycje])
     return wydatki, pozycje
 
 
 def get_dochody(sprawozdanie, szkola, dzial=None, rozdzial=None, paragraf=None):
     szkola = get_szkola(sprawozdanie, szkola, is_dochody=True)["Sprawozdania"]["Rb-27s"]
     pozycje = copy(szkola["Pozycje"]["Pozycja"])
-    dochody = 0
+
     for klucz, filtr in zip(("Dzial", "Rozdzial", "Paragraf"), (dzial, rozdzial, paragraf)):
         for pozycja in szkola["Pozycje"]["Pozycja"]:
             if filtr and filtr != pozycja[klucz]:
@@ -50,11 +49,9 @@ def get_dochody(sprawozdanie, szkola, dzial=None, rozdzial=None, paragraf=None):
                 except ValueError:
                     pass
             else:
-                try:
-                    dochody += float(pozycja["DW"])
-                except KeyError:
-                    pozycja["DW"] = "0"
-
+                if "DW" not in pozycja:
+                     pozycja["DW"] = "0"
+    dochody = sum([float(dochod["DW"]) for dochod in pozycje])
     return dochody, pozycje
 
 
