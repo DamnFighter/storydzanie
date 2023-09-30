@@ -63,3 +63,6 @@ def get_sio_students(sio_file_path):
                     sio_dict[headers[idx]] = j['Data'].get("#text", None)
         sio_list.append(sio_dict)
     return sio_list
+
+
+get_sio_works = get_sio_students
