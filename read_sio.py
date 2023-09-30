@@ -33,3 +33,13 @@ def get_sio_list(sio_file_path):
                         sio_dict[headers[idx]] = j["Data"].get("#text", None)
             sio_list.append(sio_dict)
     return sio_list
+
+
+def get_szkola(sio, szkola):
+    for sz in sio:
+        if "Regon".upper() in sz and sz["Regon".upper()] == szkola:
+            return sz
+
+
+def get_max_uczniow(sio):
+    return float(sio[-1]["Liczba uczniów"]) + float(sio[-1]["Liczba uczniów poza szkołą"])
