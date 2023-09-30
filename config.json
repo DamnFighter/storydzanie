@@ -1,0 +1,16 @@
+{
+    "departments": [
+        {
+            "department_name": "Dział 801",
+            "next_department_name": "Dział 851",
+            "key": "education",
+            "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
+        },
+        {
+            "department_name": "Dział 854",
+            "next_department_name": "Dział 855",
+            "key": "education_with_care",
+            "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
+        }
+    ]
+}
