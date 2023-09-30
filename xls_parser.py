@@ -58,5 +58,7 @@ def xls_json(excel_file, output_file):
         json.dump(modified_data, json_file, indent=4, ensure_ascii=False)
 
 
-xls_json("./dane_kutno/Wyniki_e8_szkoly_2022.xlsx")
-xls_json("./dane_kutno/Wyniki_E8_szkoly_2023.xlsx")
+# xls_json("./dane_kutno/Wyniki_e8_szkoly_2022.xlsx", output_file="out2022.json")
+xls_json("./dane_kutno/Wyniki_E8_szkoly_2023.xlsx", output_file="out2023.json")
+
+# xls_json("./dane_kutno/Staniny.xlsx[staniny_szkol2022]", output_file="staniny22_out.json")
