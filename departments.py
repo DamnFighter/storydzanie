@@ -1,7 +1,5 @@
 import PyPDF2
 import re
-import json
-
 
 class Department:
     def __init__(self, file_path, department_name, next_department_name):
