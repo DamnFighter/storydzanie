@@ -4,13 +4,13 @@
             "department_name": "Dział 801",
             "next_department_name": "Dział 851",
             "key": "education",
-            "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
+            "file_path": "dane_kutno\\Rozporządzenie - klasyfikacja D20220513.pdf"
         },
         {
             "department_name": "Dział 854",
             "next_department_name": "Dział 855",
             "key": "education_with_care",
-            "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
+            "file_path": "dane_kutno\\Rozporządzenie - klasyfikacja D20220513.pdf"
         }
     ],
     "paragraphs": [
@@ -18,13 +18,13 @@
             "start_string": "KLASYFIKACJA PARAGRAFÓW DOCHODÓW, PRZYCHODÓW I ŚRODKÓW",
             "end_string": "KLASYFIKACJA PARAGRAFÓW WYDATKÓW I ŚRODKÓW",
             "key": "revenues",
-            "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
+            "file_path": "dane_kutno\\Rozporządzenie - klasyfikacja D20220513.pdf"
         },
         {
             "start_string": "KLASYFIKACJA PARAGRAFÓW WYDATKÓW I ŚRODKÓW",
             "end_string": "KLASYFIKACJA PARAGRAFÓW ROZCHODÓW",
             "key": "expenses",
-            "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
+            "file_path": "dane_kutno\\Rozporządzenie - klasyfikacja D20220513.pdf"
         }
     ],
     "groups": [
@@ -32,7 +32,7 @@
             "start_string": "Symbole grup",
             "end_string": "Klasyfikacja paragrafów",
             "key": "groups",
-            "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
+            "file_path": "dane_kutno\\Rozporządzenie - klasyfikacja D20220513.pdf"
         }
     ]
 

@@ -12,7 +12,7 @@ class RegulationParser:
         self.config_data = self.load_config()
 
     def load_config(self):
-        with open(self.config_file_path, 'r') as config_file:
+        with open(self.config_file_path, 'r', encoding="UTF-8") as config_file:
             return json.load(config_file)
 
     def get_departments(self):
