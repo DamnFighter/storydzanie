@@ -15,14 +15,14 @@
     ],
     "paragraphs": [
         {
-            "start_string": "Załącznik nr 3",
-            "end_string": "Załącznik nr 4",
+            "start_string": "KLASYFIKACJA PARAGRAFÓW DOCHODÓW, PRZYCHODÓW I ŚRODKÓW",
+            "end_string": "KLASYFIKACJA PARAGRAFÓW WYDATKÓW I ŚRODKÓW",
             "key": "revenues",
             "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
         },
         {
-            "start_string": "Załącznik nr 4",
-            "end_string": "Załącznik nr 5",
+            "start_string": "KLASYFIKACJA PARAGRAFÓW WYDATKÓW I ŚRODKÓW",
+            "end_string": "KLASYFIKACJA PARAGRAFÓW ROZCHODÓW",
             "key": "expenses",
             "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
         }
