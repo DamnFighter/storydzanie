@@ -26,6 +26,14 @@
             "key": "expenses",
             "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
         }
+    ],
+    "groups": [
+        {
+            "start_string": "Symbole grup",
+            "end_string": "Klasyfikacja paragrafów",
+            "key": "groups",
+            "file_path": "dane_kutno/Rozporządzenie - klasyfikacja D20220513.pdf"
+        }
     ]
 
 }
