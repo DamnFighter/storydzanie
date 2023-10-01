@@ -34,7 +34,7 @@ class RegulationParser:
 
             paragraphs_instance = Paragraphs(file_path, start_string, end_string)
             self.paragraphs[key] = paragraphs_instance.get_paragraphs_list()
-            return self.paragraphs
+        return self.paragraphs
 
     def get_group(self):
         return {}
