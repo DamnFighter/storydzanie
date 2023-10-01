@@ -1,3 +1,4 @@
+from stanin_parser import get_stanin_level
 from xml_parser import get_data
 from sprawozdania_parser import get_wydatki, get_dochody
 from read_sio import get_sio_list, get_szkola, get_max_uczniow
@@ -9,6 +10,7 @@ class Counter:
         self.spraw_wyd = get_data(r'dane_kutno\Sprawozdania[2022][IVKwartał] Wydatki.xml')
         self.spraw_doch = get_data(r'dane_kutno\Sprawozdania[2022][IVKwartał] Dochody.xml')
         self.sio = get_sio_list(r'dane_kutno\SIO 30.09.2022.xml')
+        self.staniny = "./dane_kutno/Staniny.xlsx"
 
     def count_szkola(self, szkola, wydatki, dochody):
         sio_szkola = get_szkola(self.sio, szkola)
@@ -30,9 +32,16 @@ class Counter:
             wydatki, lista_wydatkow = get_wydatki(self.spraw_wyd, szkola_reg)
             dochody, lista_dochodow = get_dochody(self.spraw_doch, szkola_reg)
             saldo, saldo_os = self.count_szkola(szkola_reg, wydatki, dochody)
-            szkoly.append([szkola["Nazwa"], saldo, saldo_os, lista_wydatkow, lista_dochodow])
+            szkoly.append([szkola["Nazwa"], round(saldo, 2), round(saldo_os, 2), self.count_stanis(szkola)["Efektywnosc"], lista_wydatkow, lista_dochodow])
         return szkoly
 
-a = Counter()
-x = a.count_for_all()
-pass
+    def count_stanis(self, szkola):
+        return get_stanin_level(school=szkola["Nazwa"], file=self.staniny, year="2022")
+
+
+if __name__ == "__main__":
+    # Test countera
+    a = Counter()
+    x = a.count_for_all()
+    print(x)
+
