@@ -21,7 +21,11 @@ class Counter:
 
     def count_for_all(self):
         szkoly = []
-        for szkola in self.spraw_wyd["PaczkaSprawozdan"]["Jednostki"]["Jednostka"]:
+        if "Jednostki" in self.spraw_wyd:
+            jednostki = self.spraw_wyd["Jednostki"]["Jednostka"]
+        else:
+            jednostki = self.spraw_wyd["PaczkaSprawozdan"]["Jednostki"]["Jednostka"]
+        for szkola in jednostki:
             szkola_reg = szkola["Regon"]
             wydatki, lista_wydatkow = get_wydatki(self.spraw_wyd, szkola_reg)
             dochody, lista_dochodow = get_dochody(self.spraw_doch, szkola_reg)
@@ -29,5 +33,6 @@ class Counter:
             szkoly.append([szkola["Nazwa"], saldo, saldo_os, lista_wydatkow, lista_dochodow])
         return szkoly
 
-a = Counter().count_for_all()
+a = Counter()
+x = a.count_for_all()
 pass
