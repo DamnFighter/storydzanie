@@ -58,14 +58,4 @@ def get_stanin_level(school, file, year, subject_1="Język polski", subject_2="M
     sub3_percent = get_skala_item("staniny_skala.json", sub3_stanin, "Język angielski")
     efektywnosc = count_efektywnosc(ilosc_subjectow*max_stanin_per_przedmiot, stanin_sum)
 
-    return {subject_1: sub1_percent, subject_2: sub2_percent, subject_3: sub3_percent, 'Efektywność szkoły': efektywnosc}
-
-
-print(get_stanin_level(school="Szkoła podstawowa nr 7", file="./dane_kutno/Staniny.xlsx", year="2022"))
-
-
-
-
-
-
-
+    return {subject_1: sub1_percent, subject_2: sub2_percent, subject_3: sub3_percent, 'Efektywnosc': efektywnosc}
