@@ -1,0 +1,140 @@
+body {
+  font-size: 120%;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+body {
+background-size:     cover;                      /* <------ */
+background-repeat:   no-repeat;
+
+}
+
+.demo-wrap:before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+
+.mybuttonLicz {
+	box-shadow:inset 0px 1px 0px 0px #97c4fe;
+	background:linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+	background-color:#3d94f6;
+	border-radius:6px;
+	border:1px solid #337fed;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:23px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #1570cd;
+}
+.mybuttonLicz:hover {
+	background:linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+	background-color:#1e62d0;
+}
+.mybuttonLicz:active {
+	position:relative;
+	top:1px;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:20px 52px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	background-color:#c62d1f;
+}
+.myButton:active {
+	position:relative;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	top:1px;
+}
+
+
+.navbar-default {
+    font-size: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+td {
+    margin: 100;
+    display: table-cell;
+    vertical-align: inherit;
+    content:"\!";
+    white-space: pre;
+    content: '*';
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    font-size: small;
+    height: auto;
+}
+div.dataTables_wrapper div.dataTables_filter label{
+    font-size: small;
+}
+
+div.dataTables_wrapper div.dataTables_length select{
+    font-size: small;
+    height: auto;
+}
+div.dataTables_wrapper div.dataTables_length label{
+    font-size: small;
+}
+
+table.dataTable{
+    border: groove;
+}
+
+thead {
+    text-align-last: center;
+}
+tfoot {
+    text-align-last: center;
+}
+div#content {
+    display: none;
+    }
+div#loading {
+    margin: auto;
+    width: 600px;
+    height: 600px;
+    background: url(loadingimage.gif) no-repeat;
+    cursor: wait;
+    }

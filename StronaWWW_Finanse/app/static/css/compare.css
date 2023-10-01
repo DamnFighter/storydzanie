@@ -1,0 +1,27 @@
+#tool_box{
+    font-size: large;
+}
+
+#data_table_length {
+    display: none;
+}
+
+#data_table_filter {
+    display: block;
+}
+
+#data_table_wrapper > div:nth-child(3) {
+    display: block;
+}
+
+thead {
+    text-align-last: center;
+}
+
+tfoot {
+    text-align-last: center;
+}
+
+#vca_img{
+    text-align: center;
+}

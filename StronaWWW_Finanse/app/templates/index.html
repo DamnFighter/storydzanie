@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>{{ type.performance }}</h1>
+    <head>
+        <title>Main</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/rowgroup/1.1.1/css/rowGroup.bootstrap.min.css"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+        <h1> Kutno - uDane Kształcenie zlotówki </h1>
+        <div id=main class="container mb-5 mt-3">
+            <form action="/performance" method="get" autocomplete="off" class="subscribe-form">
+                <div class="form-group d-flex">
+                     <input type="text" class="form-control" placeholder="Ostateczna kwota części oświatowej subwencji ogólnej" name="q" id="q" value="{{q}}">
+                     <input type="submit" value="LICZ" class="mybuttonLicz">
+                 </div>
+            </form>
+        </div>
+
+    </body>
+{% endblock %}
