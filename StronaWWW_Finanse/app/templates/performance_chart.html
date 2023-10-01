@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chartist.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/legend.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.min.css') }}">
+    <script src="{{ url_for('static', filename='jquery/chartist.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery/chartist-plugin-legend.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery/chartist-plugin-axistitle.js') }}"></script>
+</head>
+<body>
+    <div id=performance class="ct-chart ct-chart-line"></div>
+        <script>
+            var new_label_performance = []
+            var new_legend_performance = []
+            var new_series_performance = []
+
+            {% for result in performance_builds %}
+                new_label_performance.push('{{result[0]}}')
+            {% endfor %};
+
+            {% for result in performance_configs %}
+                new_legend_performance.push('{{result[0]}}')
+            {% endfor %};
+
+            {% for result in performance_res %}
+                new_series_performance.push('{{result | replace("),", " ") | replace("(", " ") | replace(")", " ") | replace("None", "null")}}')
+            {% endfor %};
+
+            console.log(new_series_performance)
+
+            performance_arr_arr = []
+            for (var i = 0; i < new_series_performance.length; i++) {
+                performance_arr_arr[i] = eval(new_series_performance[i])
+            }
+
+            var chart = new Chartist.Line('#performance', {
+                labels: new_label_performance,
+
+                series: performance_arr_arr,
+                }, {
+                    fullWidth: true,
+                    low: 0,
+                    showArea: true,
+                    chartPadding: {
+                        right: 40
+                    },
+                plugins: [
+                    Chartist.plugins.legend({
+                        legendNames: new_legend_performance,
+                    }),
+                    Chartist.plugins.ctAxisTitle({
+                    axisX: {
+                      axisTitle: "Build",
+                      axisClass: "ct-axis-title",
+                      offset: {
+                        x: 0,
+                        y: 35
+                      },
+                      textAnchor: "middle"
+                    },
+                    axisY: {
+                      axisTitle: "DROPS",
+                      axisClass: "ct-axis-title",
+                      offset: {
+                        x: 30,
+                        y: 0
+                      },
+                      flipTitle: false
+                    }
+                  })
+                ],
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                }
+            });
+            chart.on('draw', function(data) {
+              if(data.type === 'line' || data.type === 'area') {
+                data.element.animate({
+                  d: {
+                    begin: 500 * data.index,
+                    dur: 500,
+                    from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                    to: data.path.clone().stringify(),
+                    easing: Chartist.Svg.Easing.easeOutQuint
+                  }
+                });
+              }
+            });
+        </script>
+    </div>
+</body>
+</html>

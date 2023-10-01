@@ -1,0 +1,48 @@
+<div id=performance_search class="container mb-5 mt-3" xmlns="http://www.w3.org/1999/html">
+    <p>
+        <label> Szkoły: </label>
+        <select id=performance_builds name=performance_builds method="GET" action="/" >
+            <option >{{""}}</option>"
+            <option >{{"Szkoła Podstawowa im WA nr2"}}</option>"
+            {% for build in performance_builds %}
+            <option >{{build[0]}}</option>"
+            {% endfor %}
+        </select>
+    </p>
+    <p id=performance_build_p>
+        <label> Działy: </label>
+        <select id=performance_compare name= compare >
+            <option >{{""}}</option>"
+            <option >{{"801"}}</option>"
+            {% for build in performance_builds %}
+            <option >{{build[0]}}</option>"
+            {% endfor %}
+        </select>
+    </p>
+    <p>
+        <label> Rozdziały: </label>
+        <select id=performance_card name= iperf_card method="GET" action="/" >
+            <option >{{""}}</option>"
+            <option >{{"80101"}}</option>"
+            {% for card in iperf_card %}
+            <option >{{card[0]}}</option>"
+            {% endfor %}
+        </select>
+    </p>
+    <p>
+        <label> Paragrafy: </label>
+        <select id=performance_signal name= cards >
+            <option >{{""}}</option>"
+            <option >{{"302"}}</option>"
+            {% for signal in performance_signals %}
+            <option >{{signal[0]}}</option>"
+            {% endfor %}
+
+        </select>
+    </p>
+
+    <p> <h1 id=performance_build_label xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" style="font-size: 150%; font-weight: bold"> </h1> </p>
+
+    <p><h1 id=performance_compare_label xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" style="font-size: 150%; font-weight: bold"> </h1></p>
+
+</div>

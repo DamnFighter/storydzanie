@@ -1,0 +1,13 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}
+    {% if title %}{{ title }} - Finanse Oświaty{% else %}Welcome to DPDK Performance database{% endif %}
+{% endblock %}
+
+
+{% block navbar %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <nav class="navbar navbar-default">
+        <a href="/"> MAIN SITE </a><a href="/performance"> Finanse Oświaty </a>
+    </nav>
+{% endblock %}

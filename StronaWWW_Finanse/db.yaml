@@ -1,0 +1,10 @@
+#mysql_host: 'localhost'
+#mysql_user: 'root'
+#mysql_password: ''
+#mysql_db: 'iperf_results'
+
+
+mysql_host: 'tcp:10.232.222.108'
+mysql_user: 'root'
+mysql_password: 'rdma'
+mysql_db: 'rdma_perf_database'
